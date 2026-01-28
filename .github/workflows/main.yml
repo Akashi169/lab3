@@ -1,0 +1,14 @@
+name: Test_GitHub_Actions
+on: [push] 
+
+jobs:
+  hello-world-job:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Bước 1 - Lấy code
+        uses: actions/checkout@v4
+      
+      - name: Bước 2 - Chạy lệnh kiểm tra
+        run: |
+          echo "Chào bạn, đây là GitHub Actions"
+          node -v
